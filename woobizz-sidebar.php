@@ -29,7 +29,7 @@ include( 'admin/sidebar-options.php' );
 foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/sections/*.php" ) as $file ) {
     include_once $file;
 }
-/** Create the Options Page */
+///ADD OPTIONS AND SUBMENU
 $options_page = new WoobizzSidebarOptions( 'WooBizz Sidebar', 'woobizz-sidebar', WOOBIZZSIDEBAR, 'admin.php', null, 'read', null, true, false, true, $options );
 function woobizz_sidebar_submenu(){
 	//add_submenu_page($parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function);
