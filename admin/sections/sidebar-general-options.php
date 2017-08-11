@@ -30,7 +30,7 @@ add_action( 'admin_menu', 'woobizz_main_menu' );
 if (!function_exists( 'woobizz_hide_sidebar_notices' ) ) {
 	function woobizz_hide_sidebar_notices() {
 		if (strpos($_SERVER['REQUEST_URI'], "woobizz-sidebar") !== false){
-			echo"<style>.notice{display:none;}</style>";
+			echo"<style>.notice{display:none;}#tab-list:before{content:'WooBizz Sidebar';text-transform: uppercase;margin:18px 18px 18px 18px;display:inherit;}</style>";
 		}else{
 		 //do nothing
 		}

@@ -5,7 +5,7 @@ Plugin URI: http://woobizz.com
 Description: Woobizz sidebar customiser
 Author: Woobizz
 Author URI: http://woobizz.com
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: woobizz-sidebar
 Domain Path: /lang/
  */

@@ -26,25 +26,21 @@ $categories[$key->cat_ID] = ucwords($key->cat_name);
 //----------------------------------------------------------------------------
 $options = array();							
 //---------------------------------------------------------------------------- 
-//START PRODUCT SIDEBAR SECTION
+//START SIDEBAR SECTION
 //----------------------------------------------------------------------------
 $options[] = array( "name" => __('1- Sidebar Options ','woobizz-sidebar'),
 				"type" => "section");
-$options[] = array( "name" => "", 
-				"type" => "html",
-				"class" => "full",
-				 "std" => "<h1>1 Product Sidebar</h1>");	
-					 
 $options[] = array("type" => "divider");
-$options[] = array( "name" => __('1.1 Sidebar Options','woobizz-sidebar'),
+$options[] = array( "name" => __('1 Sidebar Options','woobizz-sidebar'),
 				"type" => "title",
 				"class" => "medium first",
 				"desc" => __("", "woobizz-sidebar"));
 
 $options[] = array("type" => "divider");
-$options[] = array( "name" => "1.1.1 GENERAL SETTINGS", 
+$options[] = array( "name" => "1.1 SIDEBAR POSITION & SIZE", 
 		"type" => "html",
 		 "std" => "");
+$options[] = array("type" => "divider");		 
 //Widget Position
 $options[] = array( "name" => __("Sidebar Position","woobizz-sidebar"),
 		"desc" => __("", "woobizz-sidebar"),
@@ -58,7 +54,7 @@ $options[] = array( "name" => __("Sidebar Position","woobizz-sidebar"),
 			
 			));	
 //Sidebar Widget Size			
-$options[] = array( "name" => __("Sidebar Size","woobizz-sidebar"),
+$options[] = array( "name" => __("Sidebar Width","woobizz-sidebar"),
 		"desc" => __("", "woobizz-sidebar"),
 		"id" => WOOBIZZSIDEBAR."_woobizz_sidebar_sidebarsidebarsize",
 		"class" => "short",
@@ -69,7 +65,7 @@ $options[] = array( "name" => __("Sidebar Size","woobizz-sidebar"),
 		"increment" => 1,
 		"type" => "number");	
 //Sidebar Widget Size			
-$options[] = array( "name" => __("Page Content Size","woobizz-sidebar"),
+$options[] = array( "name" => __("Page Width","woobizz-sidebar"),
 		"desc" => __("", "woobizz-sidebar"),
 		"id" => WOOBIZZSIDEBAR."_woobizz_sidebar_pagecontentsize",
 		"class" => "short last",
@@ -81,7 +77,7 @@ $options[] = array( "name" => __("Page Content Size","woobizz-sidebar"),
 		"type" => "number");		
 			
 $options[] = array("type" => "divider");
-$options[] = array( "name" => "1.1.1 PRODUCT SIDEBAR BACKGROUND", 
+$options[] = array( "name" => "1.2 SIDEBAR BACKGROUND", 
 		"type" => "html",
 		 "std" => "");
 $options[] = array("type" => "divider");	
@@ -150,7 +146,7 @@ $options[] = array( "name" => __("Background Repeat","woobizz-sidebar"),
 			5 => "Initial",
 		));	
 $options[] = array("type" => "divider");			
-$options[] = array( "name" => "1.1.2 PRODUCT SIDEBAR GRADIENTS", 
+$options[] = array( "name" => "1.3 SIDEBAR GRADIENTS", 
 		"type" => "html",
 		 "std" => "");	
 $options[] = array("type" => "divider");				 
@@ -190,7 +186,7 @@ $options[] = array( "name" => __("Gradient Opacity 2","woobizz-sidebar"),
 		"type" => "number");	
 //2.3 Page Box Shadow 
 $options[] = array("type" => "divider");
-$options[] = array( "name" => "1.1.3 PRODUCT SIDEBAR SHADOWS",
+$options[] = array( "name" => "1.4 SIDEBAR SHADOWS",
 		"type" => "html",
 		"std" => "");
 $options[] = array("type" => "divider");
@@ -251,7 +247,7 @@ $options[] = array( "name" => __("Shadow Size","woobizz-sidebar"),
 			"increment" => 1,
 			"type" => "number");
 $options[] = array("type" => "divider");
-$options[] = array( "name" => "1.1.4 PRODUCT SIDEBAR BORDER",
+$options[] = array( "name" => "1.5 SIDEBAR BORDER",
 		"type" => "html",
 		"std" => "");
 $options[] = array("type" => "divider");							
@@ -295,7 +291,7 @@ $options[] = array( "name" => __("Border Radius","woobizz-sidebar"),
 		"type" => "number");				
 // 1.2 MARGINGS 
 $options[] = array("type" => "divider");
-$options[] = array( "name" => "1.1.5 PRODUCT SIDEBAR MARGINS",
+$options[] = array( "name" => "1.6 SIDEBAR MARGINS",
 		"type" => "html",
 		 "std" => "Top & Bottom only left and right will be apply on the responsive option");
 $options[] = array("type" => "divider");
@@ -343,7 +339,7 @@ $options[] = array( "name" => __("Units Bottom","woobizz-sidebar"),
 			3 => "Points (pt)",));
 // 1.2 PADDINGS 
 $options[] = array("type" => "divider");
-$options[] = array( "name" => "1.1.6 PRODUCT SIDEBAR PADDINGS",
+$options[] = array( "name" => "1.7 SIDEBAR PADDINGS",
 		"type" => "html",
 		 "std" => "");
 $options[] = array("type" => "divider");
@@ -433,13 +429,13 @@ $options[] = array( "name" => __("Units Left","woobizz-sidebar"),
 			3 => "Points (pt)",));
 $options[] = array("type" => "divider");
 //---------------------------------------------------------------------------- 
-//END PRODUCT SIDEBAR OPTIONS
+//END SIDEBAR OPTIONS
 //----------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------- 
-//START PRODUCT SIDEBAR TITLE
+//START SIDEBAR TITLE
 //----------------------------------------------------------------------------
-$options[] = array( "name" => "1.2.2 PRODUCT SIDEBAR TITLE", 
+$options[] = array( "name" => "1.8 SIDEBAR TITLE", 
 		"type" => "html",
 		 "std" => "");
 $options[] = array("type" => "divider");
@@ -574,27 +570,40 @@ $options[] = array( "name" => __("Units Left","woobizz-sidebar"),
 			2 => "Ems” (em)",
 			3 => "Points (pt)",));			
 //---------------------------------------------------------------------------- 
-//END PRODUCT SIDEBAR TITLE
+//END SIDEBAR TITLE
 //----------------------------------------------------------------------------	
 
 //---------------------------------------------------------------------------- 
 //START BACKUP & IMPORT
 //----------------------------------------------------------------------------
-$options[] = array( "name" => __('sidebar Back-up & Reset','woobizz-sidebar'),
+$options[] = array( "name" => __('Back-up & Reset','woobizz-sidebar'),
 				"type" => "section");
-// Backup Field					
-$options[] = array( "name" => __("sidebar Back-up & Reset","woobizz-sidebar"),
+// Backup Field		
+$options[] = array("type" => "divider");
+$options[] = array( "name" => __('Back-up & Reset','woobizz-sidebar'),
+				"type" => "title",
+				"class" => "medium first",
+				"desc" => __("", "woobizz-sidebar"));
+$options[] = array("type" => "divider");			
+$options[] = array( "name" => __("Back-up","woobizz-sidebar"),
 		"desc" => __("", "woobizz-sidebar"),
 		"id" => WOOBIZZSIDEBAR."_textarea",
 		"class" => "first",
 		"type" => "backup");
-// Reset					
-$options[] = array( "name" => __("Reset All Options","woobizz-sidebar"),
+// Reset	
+$options[] = array( "name" => __("Reset all options","woobizz-sidebar"),
 		"desc" => __("", "woobizz-sidebar"),
 		"class" => "first",
-		"type" => "reset");			
-$options[] = array( "name" => __('sidebar Import & Export','woobizz-sidebar'),
-				"type" => "section");			
+		"type" => "reset");	
+//Export	
+$options[] = array( "name" => __('Import & Export','woobizz-sidebar'),
+				"type" => "section");
+$options[] = array("type" => "divider");
+$options[] = array( "name" => __('Import & Export','woobizz-sidebar'),
+				"type" => "title",
+				"class" => "medium first",
+				"desc" => __("", "woobizz-sidebar"));
+$options[] = array("type" => "divider");						
 $options[] = array( "name" => __("Export Options","woobizz-sidebar"),
 		"desc" => __("", "woobizz-sidebar"),
 		"class" => "first",

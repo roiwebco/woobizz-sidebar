@@ -30,7 +30,7 @@ function woobizz_check_if_sidebar1_is_active(){
 		//----------------------------------------------------------------------------
 		function woobizz_sidebar_allcssoptions(){
 		//----------------------------------------------------------------------------	
-		//START GENERAL SETTINGS
+		//1.1 SIDEBAR POSITION & SIZE
 		//----------------------------------------------------------------------------
 		$woobizz_sidebar_display= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_display');
 			if ($woobizz_sidebar_display==0){
@@ -47,9 +47,8 @@ function woobizz_check_if_sidebar1_is_active(){
 		$woobizz_sidebar_sidebarsidebarsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_sidebarsidebarsize');
 		$woobizz_sidebar_pagecontentsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_pagecontentsize');
 		//----------------------------------------------------------------------------	
-		//END GENERAL SETTINGS
+		//1.2 SIDEBAR BACKGROUND
 		//----------------------------------------------------------------------------	
-		//START BACKGROUND
 		$woobizz_sidebar_backgroundimage= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_backgroundimage');
 		$woobizz_sidebar_backgroundcolor= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_backgroundcolor');
 		$woobizz_sidebar_backgroundsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_backgroundsize');
@@ -111,10 +110,7 @@ function woobizz_check_if_sidebar1_is_active(){
 				$woobizz_sidebar_backgroundposition="initial";
 		}
 		//----------------------------------------------------------------------------
-		//END BACKGROUND
-		//----------------------------------------------------------------------------
-		//----------------------------------------------------------------------------
-		//START GRADIENTS
+		//1.3 SIDEBAR GRADIENTS
 		//----------------------------------------------------------------------------
 		$woobizz_sidebar_backgroundgradient1= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_backgroundgradient1');
 		$woobizz_sidebar_backgroundgradient1opacity= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_backgroundgradient1opacity');
@@ -125,10 +121,8 @@ function woobizz_check_if_sidebar1_is_active(){
 		$trasnform_woobizz_sidebar_backgroundgradient2=woobizz_sidebar_hextorgb($woobizz_sidebar_backgroundgradient2);
 		$woobizz_sidebar_backgroundfullgradient2=$trasnform_woobizz_sidebar_backgroundgradient2.",".$woobizz_sidebar_backgroundgradient2opacity;
 		//----------------------------------------------------------------------------
-		//END GRADIENTS
 		//----------------------------------------------------------------------------
-		//----------------------------------------------------------------------------
-		//START SHADOWS
+		//1.4 SIDEBAR SHADOWS
 		//----------------------------------------------------------------------------
 		$woobizz_sidebar_shadowcolor= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_shadowcolor');
 		$woobizz_sidebar_shadowrightdistance= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_shadowrightdistance');
@@ -148,10 +142,7 @@ function woobizz_check_if_sidebar1_is_active(){
 				$woobizz_sidebar_shadowfull="none";
 		} 
 		//----------------------------------------------------------------------------
-		//END SHADOW
-		//----------------------------------------------------------------------------
-		//----------------------------------------------------------------------------
-		//START BORDER
+		//1.5 SIDEBAR BORDER
 		//----------------------------------------------------------------------------
 		$woobizz_sidebar_bordersize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_bordersize');
 		$woobizz_sidebar_bordercolor= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_bordercolor');
@@ -170,13 +161,10 @@ function woobizz_check_if_sidebar1_is_active(){
 		$woobizz_sidebar_borderfull=$woobizz_sidebar_bordersize."px "
 										.$woobizz_sidebar_borderstyle." "
 										.$woobizz_sidebar_bordercolor." ";
-		//----------------------------------------------------------------------------
-		//END BORDER
-		//----------------------------------------------------------------------------
 		//---------------------------------------------------------------------------- 
-		//START MARGINS
+		//1.6 SIDEBAR MARGINS
 		//----------------------------------------------------------------------------
-		//Padding Top
+		//Margin top
 		$woobizz_sidebar_margintopsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_margintopsize');
 		$woobizz_sidebar_marginunittop= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_marginunittop');
 		if ($woobizz_sidebar_marginunittop==0){
@@ -237,10 +225,7 @@ function woobizz_check_if_sidebar1_is_active(){
 									   .$woobizz_sidebar_marginbottomsize.$woobizz_sidebar_marginunitbottom." "
 									   .$woobizz_sidebar_marginleftsize.$woobizz_sidebar_marginunitleft." ";							   	
 		//---------------------------------------------------------------------------- 
-		//END MARGIN
-		//----------------------------------------------------------------------------
-		//---------------------------------------------------------------------------- 
-		//START PADDING
+		//1.7 SIDEBAR PADDINGS
 		//----------------------------------------------------------------------------
 		//Padding Top
 		$woobizz_sidebar_paddingtopsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_paddingtopsize');
@@ -303,10 +288,7 @@ function woobizz_check_if_sidebar1_is_active(){
 									   .$woobizz_sidebar_paddingbottomsize.$woobizz_sidebar_paddingunitbottom." "
 									   .$woobizz_sidebar_paddingleftsize.$woobizz_sidebar_paddingunitleft." ";							   	
 		//---------------------------------------------------------------------------- 
-		//END PADDING
-		//----------------------------------------------------------------------------
-		//---------------------------------------------------------------------------- 
-		//START SIDEBAR SIDEBAR TITLE
+		//1.8 SIDEBAR TITLE
 		//----------------------------------------------------------------------------
 		//Hide Title?
 		$woobizz_sidebar_titlehide=get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_titlehide');
@@ -400,244 +382,7 @@ function woobizz_check_if_sidebar1_is_active(){
 									   .$woobizz_sidebar_titlepaddingrightsize.$woobizz_sidebar_titlepaddingunitright." "
 									   .$woobizz_sidebar_titlepaddingbottomsize.$woobizz_sidebar_titlepaddingunitbottom." "
 									   .$woobizz_sidebar_titlepaddingleftsize.$woobizz_sidebar_titlepaddingunitleft." ";
-		//---------------------------------------------------------------------------- 
-		//END SIDEBAR SIDEBAR TITLE
-		//----------------------------------------------------------------------------
-		//---------------------------------------------------------------------------- 
-		//START SIDEBAR SIDEBAR DESCRIPTION
-		//----------------------------------------------------------------------------
-		//Hide Description?
-		$woobizz_sidebar_descriptionhide=get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionhide');
-		if ($woobizz_sidebar_descriptionhide==0){
-			$woobizz_sidebar_descriptionhide="none";
-		} elseif($woobizz_sidebar_descriptionhide==1) {
-			$woobizz_sidebar_descriptionhide="inherit";
-		} else {
-			$woobizz_sidebar_descriptionhide="inherit";
-		}
-		//Description Size
-		$woobizz_sidebar_descriptionsize=get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionsize');
-		//Description Color
-		$woobizz_sidebar_descriptioncolor=get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptioncolor');
-		//Description Weight
-		$woobizz_sidebar_descriptionweight=get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionweight');
-		if ($woobizz_sidebar_descriptionweight==0){
-				$woobizz_sidebar_descriptionweight="100";
-			} elseif($woobizz_sidebar_descriptionweight==1) {
-				$woobizz_sidebar_descriptionweight="200";
-			} elseif($woobizz_sidebar_descriptionweight==2) {
-				$woobizz_sidebar_descriptionweight="300";
-			} elseif($woobizz_sidebar_descriptionweight==3) {
-				$woobizz_sidebar_descriptionweight="400";
-			} elseif($woobizz_sidebar_descriptionweight==4) {
-				$woobizz_sidebar_descriptionweight="500";
-			} elseif($woobizz_sidebar_descriptionweight==5) {
-				$woobizz_sidebar_descriptionweight="600";
-			} elseif($woobizz_sidebar_descriptionweight==6) {
-				$woobizz_sidebar_descriptionweight="700";
-			} else {$woobizz_sidebar_descriptionweight="400";
-		}
-		//Padding Top
-		$woobizz_sidebar_descriptionpaddingtopsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingtopsize');
-		$woobizz_sidebar_descriptionpaddingunittop= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingunittop');
-		if ($woobizz_sidebar_descriptionpaddingunittop==0){
-			$woobizz_sidebar_descriptionpaddingunittop="px";
-		} elseif($woobizz_sidebar_descriptionpaddingunittop==1) {
-			$woobizz_sidebar_descriptionpaddingunittop="%";
-		} elseif($woobizz_sidebar_descriptionpaddingunittop==2) {
-			$woobizz_sidebar_descriptionpaddingunittop="em";
-		} elseif($woobizz_sidebar_descriptionpaddingunittop==3) {
-			$woobizz_sidebar_descriptionpaddingunittop="pt";
-		} else {
-			$woobizz_sidebar_descriptionpaddingunittop="initial";
-		} 
-		//Padding Right
-		$woobizz_sidebar_descriptionpaddingrightsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingrightsize');
-		$woobizz_sidebar_descriptionpaddingunitright= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingunitright');
-		if ($woobizz_sidebar_descriptionpaddingunitright==0){
-			$woobizz_sidebar_descriptionpaddingunitright="px";
-		} elseif($woobizz_sidebar_descriptionpaddingunitright==1) {
-			$woobizz_sidebar_descriptionpaddingunitright="%";
-		} elseif($woobizz_sidebar_descriptionpaddingunitright==2) {
-			$woobizz_sidebar_descriptionpaddingunitright="em";
-		} elseif($woobizz_sidebar_descriptionpaddingunitright==3) {
-			$woobizz_sidebar_descriptionpaddingunitright="pt";
-		} else {
-			$woobizz_sidebar_descriptionpaddingunitright="initial";
-		}	
-		//Padding Bottom
-		$woobizz_sidebar_descriptionpaddingbottomsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingbottomsize');
-		$woobizz_sidebar_descriptionpaddingunitbottom= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingunitbottom');
-		if ($woobizz_sidebar_descriptionpaddingunitbottom==0){
-			$woobizz_sidebar_descriptionpaddingunitbottom="px";
-		} elseif($woobizz_sidebar_descriptionpaddingunitbottom==1) {
-			$woobizz_sidebar_descriptionpaddingunitbottom="%";
-		} elseif($woobizz_sidebar_descriptionpaddingunitbottom==2) {
-			$woobizz_sidebar_descriptionpaddingunitbottom="em";
-		} elseif($woobizz_sidebar_descriptionpaddingunitbottom==3) {
-			$woobizz_sidebar_descriptionpaddingunitbottom="pt";
-		} else {
-			$woobizz_sidebar_descriptionpaddingunitbottom="initial";
-		}	
-		//Padding Left
-		$woobizz_sidebar_descriptionpaddingleftsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingleftsize');
-		$woobizz_sidebar_descriptionpaddingunitleft= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_descriptionpaddingunitleft');
-		if ($woobizz_sidebar_descriptionpaddingunitleft==0){
-			$woobizz_sidebar_descriptionpaddingunitleft="px";
-		} elseif($woobizz_sidebar_descriptionpaddingunitleft==1) {
-			$woobizz_sidebar_descriptionpaddingunitleft="%";
-		} elseif($woobizz_sidebar_descriptionpaddingunitleft==2) {
-			$woobizz_sidebar_descriptionpaddingunitleft="em";
-		} elseif($woobizz_sidebar_descriptionpaddingunitleft==3) {
-			$woobizz_sidebar_descriptionpaddingunitleft="pt";
-		} else {
-			$woobizz_sidebar_descriptionpaddingunitleft="initial";
-		}
-		$woobizz_sidebar_descriptionpaddingfull=$woobizz_sidebar_descriptionpaddingtopsize.$woobizz_sidebar_descriptionpaddingunittop." "
-									   .$woobizz_sidebar_descriptionpaddingrightsize.$woobizz_sidebar_descriptionpaddingunitright." "
-									   .$woobizz_sidebar_descriptionpaddingbottomsize.$woobizz_sidebar_descriptionpaddingunitbottom." "
-									   .$woobizz_sidebar_descriptionpaddingleftsize.$woobizz_sidebar_descriptionpaddingunitleft." ";
-		//---------------------------------------------------------------------------- 
-		//END SIDEBAR SIDEBAR DESCRIPTION
-		//----------------------------------------------------------------------------
-		//---------------------------------------------------------------------------- 
-		//START 1.2.1 SIDEBAR SIDEBAR THUMBNAIL
-		//----------------------------------------------------------------------------
-		//Hide Thumnail?
-		$woobizz_sidebar_thumbsbghide=get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbghide');
-		if ($woobizz_sidebar_thumbsbghide==0){
-			$woobizz_sidebar_thumbsbghide="none";
-		} elseif($woobizz_sidebar_thumbsbghide==1) {
-			$woobizz_sidebar_thumbsbghide="inherit";
-		} else {
-			$woobizz_sidebar_thumbsbghide="inherit";
-		}
-		//Expand Thumbnail?
-		$woobizz_sidebar_thumbsbgexpand=get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgexpand');
-		if ($woobizz_sidebar_thumbsbgexpand==0){
-			$woobizz_sidebar_thumbsbgexpand="100%";
-		} elseif($woobizz_sidebar_thumbsbgexpand==1) {
-			$woobizz_sidebar_thumbsbgexpand="auto";
-		} else {
-			$woobizz_sidebar_thumbsbgexpand="auto";
-		}
-		//Borders
-		$woobizz_sidebar_thumbsbgbordersize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgbordersize');
-		$woobizz_sidebar_thumbsbgbordercolor= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgbordercolor');
-		$woobizz_sidebar_thumbsbgborderstyle= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgborderstyle');
-		if ($woobizz_sidebar_thumbsbgborderstyle==0){
-				$woobizz_sidebar_thumbsbgborderstyle="dotted";
-			} elseif($woobizz_sidebar_thumbsbgborderstyle==1) {
-				$woobizz_sidebar_thumbsbgborderstyle="dashed";
-			} elseif($woobizz_sidebar_thumbsbgborderstyle==2) {
-				$woobizz_sidebar_thumbsbgborderstyle="solid";
-			} elseif($woobizz_sidebar_thumbsbgborderstyle==3) {
-				$woobizz_sidebar_thumbsbgborderstyle="none";
-			} else {$woobizz_sidebar_thumbsbgborderstyle="none";
-		}
-		$woobizz_sidebar_thumbsbgborderradius= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgborderradius'); 
-		$woobizz_sidebar_thumbsbgborderfull=$woobizz_sidebar_thumbsbgbordersize."px "
-										.$woobizz_sidebar_thumbsbgborderstyle." "
-										.$woobizz_sidebar_thumbsbgbordercolor." ";
-		//Shadows
-		$woobizz_sidebar_thumbsbgshadowcolor= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgshadowcolor');
-		$woobizz_sidebar_thumbsbgshadowrightdistance= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgshadowrightdistance');
-		$woobizz_sidebar_thumbsbgshadowbottomdistance= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgshadowbottomdistance');
-		$woobizz_sidebar_thumbsbgshadowspread= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgshadowspread');
-		$woobizz_sidebar_thumbsbgshadowsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgshadowsize');
-		$woobizz_sidebar_thumbsbgshadowapply= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgshadowapply');
-		if ($woobizz_sidebar_thumbsbgshadowapply==0){
-				$woobizz_sidebar_thumbsbgshadowfull=$woobizz_sidebar_thumbsbgshadowrightdistance."px "
-													.$woobizz_sidebar_thumbsbgshadowbottomdistance."px "
-													.$woobizz_sidebar_thumbsbgshadowspread."px "
-													.$woobizz_sidebar_thumbsbgshadowsize."px "
-													.$woobizz_sidebar_thumbsbgshadowcolor;
-			} elseif($woobizz_sidebar_thumbsbgshadowapply==1) {
-				$woobizz_sidebar_thumbsbgshadowfull="none";
-			} else {
-				$woobizz_sidebar_thumbsbgshadowfull="none";
-		}
-		//----------------------------------------------------------------------------
-		//THUMBNAIL BACKGROUND
-		//----------------------------------------------------------------------------
-		$woobizz_sidebar_thumbsbgpadding= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgpadding');
-		$woobizz_sidebar_thumbsbgimage= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgimage');
-		$woobizz_sidebar_thumbsbgcolor= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgcolor');
-		$woobizz_sidebar_thumbsbgsize= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgsize');
-		if ($woobizz_sidebar_thumbsbgsize==0){
-				$woobizz_sidebar_thumbsbgsize="contain";
-			} elseif($woobizz_sidebar_thumbsbgsize==1) {
-				$woobizz_sidebar_thumbsbgsize="cover";
-			} elseif($woobizz_sidebar_thumbsbgsize==2) {
-				$woobizz_sidebar_thumbsbgsize="inherit";
-			} elseif($woobizz_sidebar_thumbsbgsize==3) {
-				$woobizz_sidebar_thumbsbgsize="initial";
-			} else {
-				$woobizz_sidebar_thumbsbgsize="initial";
-		}
-		$woobizz_sidebar_thumbsbgrepeat= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgrepeat');
-		if ($woobizz_sidebar_thumbsbgrepeat==0){
-				$woobizz_sidebar_thumbsbgrepeat="no-repeat";
-			} elseif($woobizz_sidebar_thumbsbgrepeat==1) {
-				$woobizz_sidebar_thumbsbgrepeat="repeat";
-			} elseif($woobizz_sidebar_thumbsbgrepeat==2) {
-				$woobizz_sidebar_thumbsbgrepeat="repeat-x";
-			} elseif($woobizz_sidebar_thumbsbgrepeat==3) {
-				$woobizz_sidebar_thumbsbgrepeat="repeat-y";
-			} elseif($woobizz_sidebar_thumbsbgrepeat==4) {
-				$woobizz_sidebar_thumbsbgrepeat="round";
-			} elseif($woobizz_sidebar_thumbsbgrepeat==5) {
-				$woobizz_sidebar_thumbsbgrepeat="space";
-			} elseif($woobizz_sidebar_thumbsbgrepeat==6) {
-				$woobizz_sidebar_thumbsbgrepeat="inherit";
-			} elseif($woobizz_sidebar_thumbsbgrepeat==5) {
-				$woobizz_sidebar_thumbsbgrepeat="initial";
-			} else {
-				$woobizz_sidebar_thumbsbgrepeat="initial";
-		}
-		$woobizz_sidebar_thumbsbgposition= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbgposition');
-		if ($woobizz_sidebar_thumbsbgposition==0){
-				$woobizz_sidebar_thumbsbgposition="left top";
-			} elseif($woobizz_sidebar_thumbsbgposition==1) {
-				$woobizz_sidebar_thumbsbgposition="left center";
-			} elseif($woobizz_sidebar_thumbsbgposition==2) {
-				$woobizz_sidebar_thumbsbgposition="left bottom";
-			} elseif($woobizz_sidebar_thumbsbgposition==3) {
-				$woobizz_sidebar_thumbsbgposition="right top";
-			} elseif($woobizz_sidebar_thumbsbgposition==4) {
-				$woobizz_sidebar_thumbsbgposition="right center";
-			} elseif($woobizz_sidebar_thumbsbgposition==5) {
-				$woobizz_sidebar_thumbsbgposition="right bottom";
-			} elseif($woobizz_sidebar_thumbsbgposition==6) {
-				$woobizz_sidebar_thumbsbgposition="center top";
-			} elseif($woobizz_sidebar_thumbsbgposition==7) {
-				$woobizz_sidebar_thumbsbgposition="center center";
-			} elseif($woobizz_sidebar_thumbsbgposition==8) {
-				$woobizz_sidebar_thumbsbgposition="center bottom";
-			} elseif($woobizz_sidebar_thumbsbgposition==9) {
-				$woobizz_sidebar_thumbsbgposition="initial";
-			} elseif($woobizz_sidebar_thumbsbgposition==10) {
-				$woobizz_sidebar_thumbsbgposition="initial";
-			} else {
-				$woobizz_sidebar_thumbsbgposition="initial";
-		}
-		//---------------------------------------------------------------------------- 
-		//END SIDEBAR SIDEBAR THUMBNAIL
-		//----------------------------------------------------------------------------
-		//----------------------------------------------------------------------------
-		//START THUMBNAIL GRADIENTS
-		//----------------------------------------------------------------------------
-		$woobizz_sidebar_thumbsbggradient1= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbggradient1');
-		$woobizz_sidebar_thumbsbggradient1opacity= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbggradient1opacity');
-		$trasnform_woobizz_sidebar_thumbsbggradient1=woobizz_sidebar_hextorgb($woobizz_sidebar_thumbsbggradient1);
-		$woobizz_sidebar_thumbsbgfullgradient1=$trasnform_woobizz_sidebar_thumbsbggradient1.",".$woobizz_sidebar_thumbsbggradient1opacity;
-		$woobizz_sidebar_thumbsbggradient2= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbggradient2');
-		$woobizz_sidebar_thumbsbggradient2opacity= get_option(WOOBIZZSIDEBAR.'_woobizz_sidebar_thumbsbggradient2opacity');
-		$trasnform_woobizz_sidebar_thumbsbggradient2=woobizz_sidebar_hextorgb($woobizz_sidebar_thumbsbggradient2);
-		$woobizz_sidebar_thumbsbgfullgradient2=$trasnform_woobizz_sidebar_thumbsbggradient2.",".$woobizz_sidebar_thumbsbggradient2opacity;
-		//----------------------------------------------------------------------------
-		//END GRADIENTS
-		//----------------------------------------------------------------------------
+		
 		//----------------------------------------------------------------------------    
 		//START SHOWING CSS OPTIONS
 		//----------------------------------------------------------------------------
@@ -673,13 +418,15 @@ function woobizz_check_if_sidebar1_is_active(){
 		}
 		/**Right Sidebar Title*/
 		.right-sidebar .widget-title{
-			font-size:17px;
-			font-weight:300;
+			font-size:".$woobizz_sidebar_titlesize."px;
+			font-weight:".$woobizz_sidebar_titleweight.";
+			color:".$woobizz_sidebar_titlecolor.";
 			text-align:center;
 			margin:0;
-			padding:3%;
+			padding:".$woobizz_sidebar_titlepaddingfull.";
 			border-bottom:1px solid #dbdbdb;
 			background:#f3f3f3;
+			display:".$woobizz_sidebar_titlehide.";
 		}
 		/**Right Sidebar Content Padding*/
 		.right-sidebar .widget ul,
