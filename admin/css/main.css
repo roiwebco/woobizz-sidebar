@@ -1,8 +1,3 @@
-img.image-preview {
-    max-height: 34px!important;
-    margin: -34px 10px!important;
-}
-
 #theme-options-wrapper{
 	padding: 0 0 0 0;
 	max-width: 1200px;
@@ -129,7 +124,7 @@ img.image-preview {
 	margin-bottom: 5px;
 }
 #theme-options .image-preview{
-	display: initial!important;
+	display: block;
 	padding: 20px 0;
 	max-width: 100%;
 	height: auto;
@@ -477,7 +472,7 @@ img.image-preview {
 	display: block;
 }
 #theme-options hr{
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 	margin-top: 0;
 	clear: both;
 	margin-right: 60px;
@@ -591,7 +586,7 @@ img.image-preview {
 }
 #tab-list {
     float: left;
-    width: initial;
+    width: 150px;
     margin-right: -200px;
     position: relative;
     z-index: 1;
@@ -821,6 +816,6 @@ div#titleplugin {
 
 #theme-options .wp-color-picker, #theme-options p, #theme-options .message h3 {
     font-size: 14px !important;
-	padding:1%;
-	margin-left:15px;
+	padding:1%;	
+	margin-left: 15px;
 }
