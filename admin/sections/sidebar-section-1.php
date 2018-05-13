@@ -405,28 +405,28 @@ function woobizz_check_if_sidebar1_is_active(){
 			background:linear-gradient(rgba(".$woobizz_sidebar_backgroundfullgradient1."),
 									   rgba(".$woobizz_sidebar_backgroundfullgradient2.")),
 										url(".$woobizz_sidebar_backgroundimage.");
-			background-color:".$woobizz_sidebar_backgroundcolor.";
-			background-size:".$woobizz_sidebar_backgroundsize.";
-			background-repeat:".$woobizz_sidebar_backgroundrepeat.";
-			background-position:".$woobizz_sidebar_backgroundposition.";
-			box-shadow:".$woobizz_sidebar_shadowfull.";
-			border:".$woobizz_sidebar_borderfull.";
-			border-radius:".$woobizz_sidebar_borderradius."px;
+			background-color:".$woobizz_sidebar_backgroundcolor."!important;
+			background-size:".$woobizz_sidebar_backgroundsize."!important;
+			background-repeat:".$woobizz_sidebar_backgroundrepeat."!important;
+			background-position:".$woobizz_sidebar_backgroundposition."!important;
+			box-shadow:".$woobizz_sidebar_shadowfull."!important;
+			border:".$woobizz_sidebar_borderfull."!important;
+			border-radius:".$woobizz_sidebar_borderradius."px!important;
 			margin-top:".$woobizz_sidebar_margintopsize.$woobizz_sidebar_marginunittop."!important;
 			margin-bottom:".$woobizz_sidebar_marginbottomsize.$woobizz_sidebar_marginunitbottom."!important;
-			padding:".$woobizz_sidebar_paddingfull.";					   
+			padding:".$woobizz_sidebar_paddingfull."!important;					   
 		}
 		/**Right Sidebar Title*/
 		.right-sidebar .widget-title{
-			font-size:".$woobizz_sidebar_titlesize."px;
-			font-weight:".$woobizz_sidebar_titleweight.";
-			color:".$woobizz_sidebar_titlecolor.";
+			font-size:".$woobizz_sidebar_titlesize."px!important;
+			font-weight:".$woobizz_sidebar_titleweight."!important;
+			color:".$woobizz_sidebar_titlecolor."!important;
 			text-align:center;
 			margin:0;
-			padding:".$woobizz_sidebar_titlepaddingfull.";
+			padding:".$woobizz_sidebar_titlepaddingfull."!important;
 			border-bottom:1px solid #dbdbdb;
 			background:#f3f3f3;
-			display:".$woobizz_sidebar_titlehide.";
+			display:".$woobizz_sidebar_titlehide."!important;
 		}
 		/**Right Sidebar Content Padding*/
 		.right-sidebar .widget ul,

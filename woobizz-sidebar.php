@@ -2,10 +2,10 @@
 /**
 * Plugin Name: Woobizz Sidebar 
 * Plugin URI: https://woobizz.com
-* Description: Woocommerce Sidebar Customiser
-* Author: Woobizz
-* Author URI: https://woobizz.com
-* Version: 1.0.1
+* Description: WooCommerce Storefront Sidebar Customiser
+* Author: ROIWEB.CO
+* Author URI: https://roiweb.co
+* Version: 1.0.2
 * Text Domain: woobizz-sidebar
 * Domain Path: /lang/
 */
