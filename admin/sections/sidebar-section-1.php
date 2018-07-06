@@ -417,7 +417,7 @@ function woobizz_check_if_sidebar1_is_active(){
 			padding:".$woobizz_sidebar_paddingfull."!important;					   
 		}
 		/**Right Sidebar Title*/
-		.right-sidebar .widget-title{
+		span.gamma.widget-title{
 			font-size:".$woobizz_sidebar_titlesize."px!important;
 			font-weight:".$woobizz_sidebar_titleweight."!important;
 			color:".$woobizz_sidebar_titlecolor."!important;
